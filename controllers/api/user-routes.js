@@ -52,6 +52,32 @@ router.post('/', (req, res) => {
         });
 });
 
+// http://localhost:3001/api/users/login (Login route)
+router.post('/login', (req, res) => {
+    const username = req.body.username;
+
+    User.findOne({
+        where: {
+            username: username
+        }
+    })
+        .then(dbUserData => {
+            if (!dbUserData) {
+                res.status(400).json({ message: 'No account with this username' });
+                return;
+            }
+
+            // Checks user's password
+            const validPassword = dbUserData.checkPassword(req.body.password);
+            if (!validPassword) {
+                res.status(400).json({ message: 'Incorrect password' });
+                return;
+            }
+
+            req.json({ user: dbUserData, message: "You're logged in." });
+        });
+});
+
 // PUT /api/users/1 (Updated user with id)
 router.put('/:id', (req, res) => {
     const userId = req.params.id;
