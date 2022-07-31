@@ -15,6 +15,8 @@
 ## Usage
 
 ## Technologies
+- [Sequelize](https://www.npmjs.com/package/sequelize)
+- [dotenv](https://www.npmjs.com/package/dotenv)
 
 ## License
 &copy; 2022 by Kayla Backus
