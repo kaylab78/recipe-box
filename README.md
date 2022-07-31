@@ -15,10 +15,12 @@
 ## Usage
 
 ## Technologies
+- JavaScript
 - [Sequelize](https://www.npmjs.com/package/sequelize)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [MySQL2](https://www.npmjs.com/package/mysql2)
 - [Express.js](https://www.npmjs.com/package/express)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
 
 ## License
 &copy; 2022 by Kayla Backus
