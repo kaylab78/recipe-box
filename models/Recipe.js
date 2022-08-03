@@ -15,6 +15,9 @@ Recipe.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        recipe_category: {
+            type: DataTypes.STRING,
+        },
         recipe_body: {
             type: DataTypes.STRING,
             allowNull: false
